@@ -22,6 +22,7 @@ Write a console/MVC application which takes the supplier name as input and displ
 **Input**: Supplier 2
 
 **Output**:
+
 |Item      |Total ( units * unit price )|Retailer charge|
 |----------|---------:|------:|
 |Soft Drink|3000.00   |120.00 |
