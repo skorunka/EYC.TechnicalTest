@@ -25,15 +25,15 @@ Write a console/MVC application which takes the supplier name as input and displ
 
 |Item      |Total ( units * unit price )|Retailer charge|
 |----------|---------:|------:|
-|Soft Drink|3000.00   |120.00 |
-|Juice     |100,000.00|5000.00|
+|Soft Drink|3,000.00   |120.00 |
+|Juice     |100,000.00|5,000.00|
 
 Explanation for "Juice":
   - Units over 500, so 3% charge 
   - Non-UK, so additional 1% charge
   - Fresh, do another 1% charge on top
 
-**So, total charges is 5% of 100,000, i.e 5000.00**
+**So, total charges is 5% of 100,000, i.e 5,000.00**
 
 ## Supplier sales data.
 
