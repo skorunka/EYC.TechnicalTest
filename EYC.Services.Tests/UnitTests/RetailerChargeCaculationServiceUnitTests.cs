@@ -36,10 +36,10 @@ namespace EYC.Services.UnitTests
 		}
 
 		[Fact]
-		public void return_5000_for_SupplierTwo_and_Juice()
+		public void return_5000_for_Supplier2_and_Juice()
 		{
 			var expectedResult = 5000m;
-			var supplierId = "SupplierTwo";
+			var supplierId = "Supplier 2";
 			var productName = "Juice";
 
 			var repository = new TestProductRepository();
@@ -50,10 +50,10 @@ namespace EYC.Services.UnitTests
 		}
 
 		[Fact]
-		public void return_120_for_SupplierTwo_and_SoftDrink()
+		public void return_120_for_Supplier2_and_SoftDrink()
 		{
 			var expectedResult = 1200m;
-			var supplierId = "SupplierTwo";
+			var supplierId = "Supplier 2";
 			var productName = "Soft Drink";
 
 			var repository = new TestProductRepository();

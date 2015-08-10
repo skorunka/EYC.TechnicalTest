@@ -33,10 +33,8 @@
 			var product = this._productRepository.Find(supplierName, productName);
 
 			var totalCharge = 5m;
-			var unitQuantity = 50000;
-			var unitPrice = 2m;
 
-			var total = unitQuantity * unitPrice;
+			var total = product.Quantity * product.UnitPrice;
 
 			return total * (totalCharge / 100);
 		}
