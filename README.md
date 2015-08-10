@@ -19,24 +19,24 @@ Write a console/MVC application which takes the supplier name as input and displ
 
 ## Sample Input / Output
 
-*Input*:  Supplier 2
-*Output*:
+**Input**: Supplier 2
 
+**Output**:
 |Item      |Total ( units * unit price )|Retailer charge|
 |----------|---------:|------:|
 |Soft Drink|3000.00   |120.00 |
 |Juice     |100,000.00|5000.00|
 
 Explanation for "Juice":
-  - Units over 500, so 3% charge. 
-  - Non-UK, so additional 1% charges
+  - Units over 500, so 3% charge 
+  - Non-UK, so additional 1% charge
   - Fresh, do another 1% charge on top
 
-*So, total charges is 5% of 100,000, i.e 5000.00*
+**So, total charges is 5% of 100,000, i.e 5000.00**
 
 ## Supplier sales data.
 
-*Supplier 1*
+**Supplier 1**
 
 |Item|Category|Units|Country|Price|
 |----|--------|-----|-------|----:|
@@ -44,7 +44,7 @@ Explanation for "Juice":
 |Chicken|Fresh|7000|Spain|2.20|
 |Milk|Processed|9000|UK|0.79|
 
-*Supplier 2*
+**Supplier 2**
 
 |Item|Category|Units|Country|Price|
 |----|--------|-----|-------|----:|
