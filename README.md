@@ -41,13 +41,13 @@ Explanation for "Juice":
 
 |Item|Category|Units|Country|Price|
 |----|--------|-----|-------|----:|
-|Egg |Fresh   |2000 |Ireland|1.25 |
-|Chicken|Fresh|7000|Spain|2.20|
-|Milk|Processed|9000|UK|0.79|
+|Egg |Fresh   |2,000 |Ireland|1.25 |
+|Chicken|Fresh|7,000|Spain|2.20|
+|Milk|Processed|9,000|UK|0.79|
 
 **Supplier 2**
 
 |Item|Category|Units|Country|Price|
 |----|--------|-----|-------|----:|
-|Soft Drink|Processed|3000|UK 1.00|
+|Soft Drink|Processed|3,000|UK|1.00|
 |Juice|Fresh|50,000|Spain|2.00|
