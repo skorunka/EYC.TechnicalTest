@@ -1,6 +1,6 @@
 ﻿// ReSharper disable CheckNamespace
 // ReSharper disable InconsistentNaming
-namespace EYC.Services.UnitTests
+namespace EYC.Services.UnitTests.ProductRepository
 {
 	using System;
 
@@ -8,10 +8,10 @@ namespace EYC.Services.UnitTests
 
 	using Xunit;
 
-	public class ProductRepositoryUnitTests
+	public class when_finding_product
 	{
 		[Fact]
-		public void find_existing_Product_by_SupplierName_and_ProductName()
+		public void return_existing_Product_by_SupplierName_and_ProductName()
 		{
 			const string supplierName = "Supplier 2";
 			const string productName = "Juice";
