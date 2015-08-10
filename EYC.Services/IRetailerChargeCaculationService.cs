@@ -2,6 +2,6 @@
 {
 	public interface IRetailerChargeCaculationService
 	{
-		decimal CalculateRetailerCharge(string supplierId, string productName);
+		decimal CalculateRetailerCharge(string supplierName, string productName);
 	}
 }

@@ -4,39 +4,36 @@ namespace EYC.Services.UnitTests
 {
 	using System;
 
-	using EYC.DomainModels;
-	using EYC.Services.Tests.Repositories;
+	using Tests.Repositories;
 
 	using Xunit;
 
 	public class ProductRepositoryUnitTests
 	{
 		[Fact]
-		public void find_existing_Product_by_ProductId()
+		public void find_existing_Product_by_SupplierName_and_ProductName()
 		{
-			var productId = "Juice";
+			const string supplierName = "Supplier 2";
+			const string productName = "Juice";
 
-			var repository = new InMemoryProductRepository() as IRepository<Product>;
+			var repository = new TestProductRepository() as IProductRepository;
 
-			Product product = repository.Find(productId);
+			var product = repository.Find(supplierName, productName);
 
 			Assert.NotNull(product);
-			Assert.Equal(productId, product.Id);
+			Assert.Equal(supplierName, product.SupplierName);
+			Assert.Equal(productName, product.Name);
 		}
 
-		[Fact]
-		public void throw_Exception_if_Product_notfound_by_ProductId()
+		[Theory]
+		[InlineData("a", "Juice")]
+		[InlineData("Supplier 2", "b")]
+		[InlineData("a", "b")]
+		public void throw_Exception_if_Product_notfound_by_SupplierName_or_ProductName(string supplierName, string productName)
 		{
-			var productId = "xxx";
+			var repository = new TestProductRepository() as IProductRepository;
 
-			var repository = new InMemoryProductRepository() as IRepository<Product>;
-
-			Assert.Throws<Exception>(() => repository.Find(productId));
-		}
-
-		[Fact]
-		public void return_Juice_where_TypeIsFresh_QuantityIs50000_CountryIsSpain_UnitPriceIs2()
-		{
+			Assert.Throws<Exception>(() => repository.Find(supplierName, productName));
 		}
 	}
 }

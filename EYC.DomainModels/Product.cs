@@ -1,9 +1,9 @@
 ﻿namespace EYC.DomainModels
 {
-	using System.Collections.Generic;
-
 	public class Product
 	{
-		public string Id { get; set; }
+		public string SupplierName { get; set; }
+
+		public string Name { get; set; }
 	}
 }

@@ -74,7 +74,7 @@
     <Compile Include="..\_shared\SharedAssemblyInfo.cs">
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="Repositories\InMemoryProductRepository.cs" />
+    <Compile Include="Repositories\TestProductRepository.cs" />
     <Compile Include="UnitTests\ProductRepositoryUnitTests.cs" />
     <Compile Include="UnitTests\RetailerChargeCaculationServiceUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

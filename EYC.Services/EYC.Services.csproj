@@ -45,7 +45,7 @@
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Implementations\RetailerChargeCaculationService.cs" />
-    <Compile Include="IRepository.cs" />
+    <Compile Include="IProductRepository.cs" />
     <Compile Include="IRetailerChargeCaculationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

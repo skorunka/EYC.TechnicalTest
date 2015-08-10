@@ -5,6 +5,7 @@ namespace EYC.Services.UnitTests
 	using System;
 
 	using EYC.Services.Implementations;
+	using EYC.Services.Tests.Repositories;
 
 	using Xunit;
 
@@ -16,7 +17,8 @@ namespace EYC.Services.UnitTests
 		{
 			var productName = "Juice";
 
-			var service = new RetailerChargeCaculationService() as IRetailerChargeCaculationService;
+			var repository = new TestProductRepository();
+			var service = new RetailerChargeCaculationService(repository) as IRetailerChargeCaculationService;
 
 			Assert.Throws<ArgumentException>(() => service.CalculateRetailerCharge(supplierId, productName));
 		}
@@ -27,7 +29,8 @@ namespace EYC.Services.UnitTests
 		{
 			var supplierId = "SupplierTwo";
 
-			var service = new RetailerChargeCaculationService() as IRetailerChargeCaculationService;
+			var repository = new TestProductRepository();
+			var service = new RetailerChargeCaculationService(repository) as IRetailerChargeCaculationService;
 
 			Assert.Throws<ArgumentException>(() => service.CalculateRetailerCharge(supplierId, productName));
 		}
@@ -39,7 +42,8 @@ namespace EYC.Services.UnitTests
 			var supplierId = "SupplierTwo";
 			var productName = "Juice";
 
-			var service = new RetailerChargeCaculationService() as IRetailerChargeCaculationService;
+			var repository = new TestProductRepository();
+			var service = new RetailerChargeCaculationService(repository) as IRetailerChargeCaculationService;
 			var result = service.CalculateRetailerCharge(supplierId, productName);
 
 			Assert.Equal(expectedResult, result);
@@ -52,7 +56,8 @@ namespace EYC.Services.UnitTests
 			var supplierId = "SupplierTwo";
 			var productName = "Soft Drink";
 
-			var service = new RetailerChargeCaculationService() as IRetailerChargeCaculationService;
+			var repository = new TestProductRepository();
+			var service = new RetailerChargeCaculationService(repository) as IRetailerChargeCaculationService;
 			var result = service.CalculateRetailerCharge(supplierId, productName);
 
 			Assert.Equal(expectedResult, result);
