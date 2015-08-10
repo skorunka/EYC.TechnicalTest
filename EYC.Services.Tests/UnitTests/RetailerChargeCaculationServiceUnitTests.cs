@@ -44,5 +44,18 @@ namespace EYC.Services.UnitTests
 
 			Assert.Equal(expectedResult, result);
 		}
+
+		[Fact]
+		public void return_120_for_SupplierTwo_and_SoftDrink()
+		{
+			var expectedResult = 1200m;
+			var supplierId = "SupplierTwo";
+			var productName = "Soft Drink";
+
+			var service = new RetailerChargeCaculationService() as IRetailerChargeCaculationService;
+			var result = service.CalculateRetailerCharge(supplierId, productName);
+
+			Assert.Equal(expectedResult, result);
+		}
 	}
 }

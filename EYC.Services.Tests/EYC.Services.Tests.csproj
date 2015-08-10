@@ -74,7 +74,9 @@
     <Compile Include="..\_shared\SharedAssemblyInfo.cs">
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="UnitTests\RetailerChargeCaculationService.cs" />
+    <Compile Include="Repositories\InMemoryProductRepository.cs" />
+    <Compile Include="UnitTests\ProductRepositoryUnitTests.cs" />
+    <Compile Include="UnitTests\RetailerChargeCaculationServiceUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -84,6 +86,10 @@
     <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.0-beta003\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EYC.DomainModels\EYC.DomainModels.csproj">
+      <Project>{947b8e8f-7173-44eb-b4ec-17d39502b4eb}</Project>
+      <Name>EYC.DomainModels</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EYC.Services\EYC.Services.csproj">
       <Project>{92beb8af-b656-4662-bbe3-54b49fec0fd3}</Project>
       <Name>EYC.Services</Name>

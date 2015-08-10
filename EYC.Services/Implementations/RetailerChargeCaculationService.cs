@@ -16,7 +16,13 @@
 				throw new ArgumentException("ProductName can not be null, empty or whitespace.", nameof(productName));
 			}
 
-			return 5000m;
+			var totalCharge = 5m;
+			var unitQuantity = 50000;
+			var unitPrice = 2m;
+
+			var total = unitQuantity * unitPrice;
+
+			return total * (totalCharge / 100);
 		}
 	}
 }
