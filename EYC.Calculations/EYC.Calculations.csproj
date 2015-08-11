@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{23CB1131-0067-408B-8D50-F4B4F311A889}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{92BEB8AF-B656-4662-BBE3-54B49FEC0FD3}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EYC.UI.Console</RootNamespace>
-    <AssemblyName>EYC.UI.Console</AssemblyName>
+    <RootNamespace>EYC.Calculations</RootNamespace>
+    <AssemblyName>EYC.Calculations</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -25,7 +23,6 @@
     <CodeAnalysisRuleSet>..\_shared\CA.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -40,27 +37,26 @@
     <Compile Include="..\_shared\SharedAssemblyInfo.cs">
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="ConsoleApplication.cs" />
-    <Compile Include="Dtos\OutputItem.cs" />
-    <Compile Include="IConsoleApplication.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Repositories\InMemoryProductRepository.cs" />
+    <Compile Include="Rules\ChargeRule.cs" />
+    <Compile Include="Rules\IChargeRule.cs" />
+    <Compile Include="Services\IProductChargeCalculationService.cs" />
+    <Compile Include="Services\ProductChargeCalculationService.cs" />
+    <Compile Include="Services\RetailerChargeCaculationService.cs" />
+    <Compile Include="Repositories\IProductRepository.cs" />
+    <Compile Include="Services\IRetailerChargeCaculationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.0-beta005\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
+    <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.0-beta003\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EYC.DomainModels\EYC.DomainModels.csproj">
       <Project>{947b8e8f-7173-44eb-b4ec-17d39502b4eb}</Project>
       <Name>EYC.DomainModels</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EYC.Calculations\EYC.Calculations.csproj">
-      <Project>{92beb8af-b656-4662-bbe3-54b49fec0fd3}</Project>
-      <Name>EYC.Calculations</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

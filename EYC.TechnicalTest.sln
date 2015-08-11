@@ -10,9 +10,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		_shared\SharedAssemblyInfo.cs = _shared\SharedAssemblyInfo.cs
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EYC.Services.Tests", "EYC.Services.Tests\EYC.Services.Tests.csproj", "{2B08DE8A-50B3-4BA5-94A9-989B7EF77D38}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EYC.Calculations.Tests", "EYC.Calculations.Tests\EYC.Calculations.Tests.csproj", "{2B08DE8A-50B3-4BA5-94A9-989B7EF77D38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EYC.Services", "EYC.Services\EYC.Services.csproj", "{92BEB8AF-B656-4662-BBE3-54B49FEC0FD3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EYC.Calculations", "EYC.Calculations\EYC.Calculations.csproj", "{92BEB8AF-B656-4662-BBE3-54B49FEC0FD3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EYC.DomainModels", "EYC.DomainModels\EYC.DomainModels.csproj", "{947B8E8F-7173-44EB-B4EC-17D39502B4EB}"
 EndProject
