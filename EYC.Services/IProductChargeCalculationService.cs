@@ -1,6 +1,6 @@
 ﻿namespace EYC.Services
 {
-	using EYC.DomainModels;
+	using DomainModels;
 
 	public interface IProductChargeCalculationService
 	{

@@ -5,6 +5,9 @@ namespace EYC.Services.UnitTests.ProductChargeCalculationService
 	using System.Collections.Generic;
 
 	using DomainModels;
+
+	using EYC.Services.Rules;
+
 	using Implementations;
 
 	using Xunit;

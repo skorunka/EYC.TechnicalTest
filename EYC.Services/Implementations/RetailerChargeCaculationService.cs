@@ -36,12 +36,12 @@
 				throw new ArgumentException("Product name can not be null, empty or whitespace.", nameof(productName));
 			}
 
+			//// [FS]: We want this product at this time, we dont care about concurent Product changes(Quantity, UnitPrice etc.).
 			var product = this._productRepository.Find(supplierName, productName);
 			var productCharge = this._productChargeCalculationService.CalculateProductCharge(product);
+			var retailerCharge = product.Quantity * product.UnitPrice * (productCharge / 100);
 
-			var total = product.Quantity * product.UnitPrice;
-
-			return total * (productCharge / 100);
+			return retailerCharge;
 		}
 	}
 }

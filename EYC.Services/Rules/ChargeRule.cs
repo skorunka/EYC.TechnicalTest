@@ -1,4 +1,4 @@
-namespace EYC.Services.Implementations
+namespace EYC.Services.Rules
 {
 	using System;
 

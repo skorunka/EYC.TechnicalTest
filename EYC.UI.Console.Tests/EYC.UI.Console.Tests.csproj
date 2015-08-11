@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2B08DE8A-50B3-4BA5-94A9-989B7EF77D38}</ProjectGuid>
+    <ProjectGuid>{637BBA7C-6BD9-4AED-BF4B-7AFF3A8FEF5C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EYC.Services.Tests</RootNamespace>
-    <AssemblyName>EYC.Services.Tests</AssemblyName>
+    <RootNamespace>EYC.UI.Console.Tests</RootNamespace>
+    <AssemblyName>EYC.UI.Console.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -40,10 +40,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Moq, Version=4.2.1507.118, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
-      <HintPath>..\packages\Moq.4.2.1507.0118\lib\net40\Moq.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
       <HintPath>..\packages\xunit.abstractions.2.0.0\lib\net35\xunit.abstractions.dll</HintPath>
@@ -70,33 +66,15 @@
     <Compile Include="..\_shared\SharedAssemblyInfo.cs">
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="Repositories\TestProductRepository.cs" />
-    <Compile Include="UnitTests\ProductChargeCalculationService\when_instantiating_service.cs" />
-    <Compile Include="UnitTests\ProductRepository\when_finding_product.cs" />
-    <Compile Include="UnitTests\RetailerChargeCaculationService\when_calculating_retailer_charge.cs" />
+    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnitTests\ProductChargeCalculationService\when_calculating_product_charge.cs" />
-    <Compile Include="UnitTests\RetailerChargeCaculationService\when_instantiating_service.cs" />
-    <Compile Include="UnitTests\Rules\ChargeRule\when_executing_rule.cs" />
-    <Compile Include="UnitTests\Rules\ChargeRule\when_instantiating_rule.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.0-beta003\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
+    <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.0-beta005\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EYC.DomainModels\EYC.DomainModels.csproj">
-      <Project>{947b8e8f-7173-44eb-b4ec-17d39502b4eb}</Project>
-      <Name>EYC.DomainModels</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EYC.Services\EYC.Services.csproj">
-      <Project>{92beb8af-b656-4662-bbe3-54b49fec0fd3}</Project>
-      <Name>EYC.Services</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

@@ -6,6 +6,9 @@ namespace EYC.Services.UnitTests.RetailerChargeCaculationService
 	using System.Collections.Generic;
 
 	using DomainModels;
+
+	using EYC.Services.Rules;
+
 	using Implementations;
 	using Tests.Repositories;
 

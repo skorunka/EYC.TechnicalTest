@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 
 [assembly: AssemblyProduct("EYC Technical Test")]
 [assembly: AssemblyCompany("EYC")]
-[assembly: AssemblyCopyright("© 2015 EYC, All Rights Reserved")]
+[assembly: AssemblyCopyright("Â© 2015 EYC, All Rights Reserved")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCulture("")]

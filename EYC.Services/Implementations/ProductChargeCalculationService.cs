@@ -4,7 +4,8 @@ namespace EYC.Services.Implementations
 	using System.Collections.Generic;
 	using System.Linq;
 
-	using EYC.DomainModels;
+	using DomainModels;
+	using Rules;
 
 	public class ProductChargeCalculationService : IProductChargeCalculationService
 	{
@@ -23,7 +24,6 @@ namespace EYC.Services.Implementations
 		public decimal CalculateProductCharge(Product product)
 		{
 			var charge = this._productChargeRules.Sum(x => x.GetCharge(product) ?? 0);
-
 			return charge;
 		}
 	}

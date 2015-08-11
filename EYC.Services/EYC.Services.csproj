@@ -35,7 +35,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
@@ -44,8 +43,8 @@
     <Compile Include="..\_shared\SharedAssemblyInfo.cs">
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="Implementations\ChargeRule.cs" />
-    <Compile Include="IChargeRule.cs" />
+    <Compile Include="Rules\ChargeRule.cs" />
+    <Compile Include="Rules\IChargeRule.cs" />
     <Compile Include="IProductChargeCalculationService.cs" />
     <Compile Include="Implementations\ProductChargeCalculationService.cs" />
     <Compile Include="Implementations\RetailerChargeCaculationService.cs" />

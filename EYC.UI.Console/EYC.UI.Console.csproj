@@ -35,13 +35,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\_shared\SharedAssemblyInfo.cs">
@@ -56,6 +49,16 @@
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.0-beta005\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EYC.DomainModels\EYC.DomainModels.csproj">
+      <Project>{947b8e8f-7173-44eb-b4ec-17d39502b4eb}</Project>
+      <Name>EYC.DomainModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EYC.Services\EYC.Services.csproj">
+      <Project>{92beb8af-b656-4662-bbe3-54b49fec0fd3}</Project>
+      <Name>EYC.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

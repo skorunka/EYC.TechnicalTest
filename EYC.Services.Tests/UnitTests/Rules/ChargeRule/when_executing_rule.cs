@@ -5,6 +5,9 @@ namespace EYC.Services.UnitTests.Rules.ChargeRule
 	using System;
 
 	using DomainModels;
+
+	using EYC.Services.Rules;
+
 	using Implementations;
 
 	using Xunit;
