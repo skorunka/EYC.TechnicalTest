@@ -26,10 +26,12 @@
 			{
 				var consoleApplication = container.Resolve<IConsoleApplication>();
 
+				var supplierName = Console.ReadLine();
+
 				Console.WriteLine("\nItem | Total( units * unit price ) | Retailer charge");
 				Console.WriteLine(new string('-', 52));
 
-				var outputItems = consoleApplication.Run(Console.ReadLine());
+				var outputItems = consoleApplication.Run(supplierName);
 
 				foreach (var outputItem in outputItems)
 				{
@@ -49,21 +51,9 @@
 			builder.RegisterType<InMemoryProductRepository>().As<IProductRepository>();
 			builder.RegisterType<RetailerChargeCaculationService>().As<IRetailerChargeCaculationService>();
 			builder.RegisterType<ProductChargeCalculationService>().As<IProductChargeCalculationService>();
-			builder.RegisterInstance(GetProductChargeRules()).As<IReadOnlyCollection<IChargeRule<Product>>>();
+			builder.RegisterInstance(Rules.ProductChargeRules).As<IReadOnlyCollection<IChargeRule<Product>>>().SingleInstance();
 
 			return builder.Build();
-		}
-
-		private static IList<IChargeRule<Product>> GetProductChargeRules()
-		{
-			return new List<IChargeRule<Product>>
-					   {
-						   new ChargeRule<Product>(6, x => x.Quantity >= 0 && x.Quantity <= 1000),
-						   new ChargeRule<Product>(4, x => x.Quantity >= 1001 && x.Quantity <= 5000),
-						   new ChargeRule<Product>(3, x => x.Quantity >= 5001),
-						   new ChargeRule<Product>(1, x => x.Country != "UK"),
-						   new ChargeRule<Product>(1, x => x.Type == ProductType.Fresh)
-					   };
 		}
 	}
 }

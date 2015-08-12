@@ -4,6 +4,7 @@ namespace EYC.Calculations.Services.UnitTests.RetailerChargeCaculationService
 {
 	using System;
 	using System.Collections.Generic;
+	using System.Security.Cryptography.X509Certificates;
 
 	using DomainModels;
 	using Rules;
@@ -13,22 +14,13 @@ namespace EYC.Calculations.Services.UnitTests.RetailerChargeCaculationService
 
 	public class when_calculating_retailer_charge
 	{
-		private static readonly IReadOnlyCollection<IChargeRule<Product>> ProductChargeRules = new List<IChargeRule<Product>>
-										 {
-											 new ChargeRule<Product>(6, x => x.Quantity >= 0 && x.Quantity <= 1000),
-											 new ChargeRule<Product>(4, x => x.Quantity >= 1001 && x.Quantity <= 5000),
-											 new ChargeRule<Product>(3, x => x.Quantity >= 5001),
-											 new ChargeRule<Product>(1, x => x.Country != "UK"),
-											 new ChargeRule<Product>(1, x => x.Type == ProductType.Fresh)
-										 };
-
 		[Theory]
 		[InlineData(null), InlineData(""), InlineData("  "), InlineData("\n \t")]
 		public void throw_ArgumentException_when_SupplierId_is_NullOrEmptyOrWhitespace(string supplierId)
 		{
 			var product = new Product { Name = "Juice" };
 
-			var productChargeCalculationService = new ProductChargeCalculationService(ProductChargeRules) as IProductChargeCalculationService;
+			var productChargeCalculationService = new ProductChargeCalculationService(Rules.ProductChargeRules) as IProductChargeCalculationService;
 			var service = new RetailerChargeCaculationService(productChargeCalculationService) as IRetailerChargeCaculationService;
 
 			Assert.Throws<ArgumentException>(() => service.CalculateRetailerCharge(supplierId, product));
@@ -39,7 +31,7 @@ namespace EYC.Calculations.Services.UnitTests.RetailerChargeCaculationService
 		{
 			const string supplierId = "SupplierTwo";
 
-			var productChargeCalculationService = new ProductChargeCalculationService(ProductChargeRules) as IProductChargeCalculationService;
+			var productChargeCalculationService = new ProductChargeCalculationService(Rules.ProductChargeRules) as IProductChargeCalculationService;
 			var service = new RetailerChargeCaculationService(productChargeCalculationService) as IRetailerChargeCaculationService;
 
 			Assert.Throws<ArgumentException>(() => service.CalculateRetailerCharge(supplierId, null));
@@ -60,7 +52,7 @@ namespace EYC.Calculations.Services.UnitTests.RetailerChargeCaculationService
 				UnitPrice = 2.00m
 			};
 
-			var productChargeCalculationService = new ProductChargeCalculationService(ProductChargeRules) as IProductChargeCalculationService;
+			var productChargeCalculationService = new ProductChargeCalculationService(Rules.ProductChargeRules) as IProductChargeCalculationService;
 			var service = new RetailerChargeCaculationService(productChargeCalculationService) as IRetailerChargeCaculationService;
 			var result = service.CalculateRetailerCharge(supplierId, product);
 
@@ -82,7 +74,7 @@ namespace EYC.Calculations.Services.UnitTests.RetailerChargeCaculationService
 				UnitPrice = 1.00m
 			};
 
-			var productChargeCalculationService = new ProductChargeCalculationService(ProductChargeRules) as IProductChargeCalculationService;
+			var productChargeCalculationService = new ProductChargeCalculationService(Rules.ProductChargeRules) as IProductChargeCalculationService;
 			var service = new RetailerChargeCaculationService(productChargeCalculationService) as IRetailerChargeCaculationService;
 			var result = service.CalculateRetailerCharge(supplierId, product);
 

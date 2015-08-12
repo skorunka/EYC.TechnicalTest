@@ -1,0 +1,7 @@
+﻿@model EYC.UI.Web.Models.Home.RetailerChargesViewModel
+
+<div class="form-group">
+	@Html.LabelFor(x => x.SupplierName)
+	@Html.TextBoxFor(x => x.SupplierName, new { @class = "form-control" })
+	@Html.ValidationMessageFor(x => x.SupplierName)
+</div>

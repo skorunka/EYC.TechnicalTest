@@ -40,6 +40,7 @@
     <Compile Include="Repositories\InMemoryProductRepository.cs" />
     <Compile Include="Rules\ChargeRule.cs" />
     <Compile Include="Rules\IChargeRule.cs" />
+    <Compile Include="Rules\Rules.cs" />
     <Compile Include="Services\IProductChargeCalculationService.cs" />
     <Compile Include="Services\ProductChargeCalculationService.cs" />
     <Compile Include="Services\RetailerChargeCaculationService.cs" />

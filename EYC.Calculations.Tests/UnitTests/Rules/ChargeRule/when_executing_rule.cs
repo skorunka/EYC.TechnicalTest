@@ -5,7 +5,6 @@ namespace EYC.Calculations.Rules.UnitTests.ChargeRule
 	using System;
 
 	using DomainModels;
-	using Rules;
 
 	using Xunit;
 

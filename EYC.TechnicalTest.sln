@@ -20,6 +20,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EYC.UI.Console", "EYC.UI.Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EYC.UI.Console.Tests", "EYC.UI.Console.Tests\EYC.UI.Console.Tests.csproj", "{637BBA7C-6BD9-4AED-BF4B-7AFF3A8FEF5C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EYC.UI.Web", "EYC.UI.Web\EYC.UI.Web.csproj", "{A5D8F7DB-618D-4F83-80C8-E0C3552A30AA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{5A37C107-8948-450E-BD6C-202A79058B18}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureVMPublishModule.psm1 = PublishScripts\AzureVMPublishModule.psm1
+		PublishScripts\Publish-WebApplicationVM.ps1 = PublishScripts\Publish-WebApplicationVM.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{07769DD5-FE76-4840-9E53-10EFA1CEF02B}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\EYCUIWeb-WAWS-dev.json = PublishScripts\Configurations\EYCUIWeb-WAWS-dev.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,8 +59,15 @@ Global
 		{637BBA7C-6BD9-4AED-BF4B-7AFF3A8FEF5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{637BBA7C-6BD9-4AED-BF4B-7AFF3A8FEF5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{637BBA7C-6BD9-4AED-BF4B-7AFF3A8FEF5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5D8F7DB-618D-4F83-80C8-E0C3552A30AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5D8F7DB-618D-4F83-80C8-E0C3552A30AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5D8F7DB-618D-4F83-80C8-E0C3552A30AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5D8F7DB-618D-4F83-80C8-E0C3552A30AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{07769DD5-FE76-4840-9E53-10EFA1CEF02B} = {5A37C107-8948-450E-BD6C-202A79058B18}
 	EndGlobalSection
 EndGlobal
